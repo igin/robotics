@@ -8,6 +8,7 @@ echo "Syncing files..."
 
 /usr/bin/expect <<EOD
 log_user 0
+set timeout -1
 spawn ssh robot@ev3dev.local "rm -rf programs"
 expect "Password: "
 send "maker\r"
